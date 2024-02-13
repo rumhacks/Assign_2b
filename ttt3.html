@@ -59,6 +59,7 @@
 </head>
 <body> 
     <h1>Tic Tac Toe Game</h1>
+    
     <div class="wrap"> 
         <script>
             const NUM_SQUARES = 9;
@@ -68,20 +69,28 @@
                 document.write( "<div class='square' id='" + id + "'></div>" );
             }
             
-            document.getElementById("myBtn").addEventListener("click", displayDate);
-
-            function displayDate() {
-              	document.getElementById("demo").innerHTML = Date();
-            }
-            
         </script>
     </div>
+    
     <br>
     <div class="turn"> X is Turn</div>
     <br>
     <div class="winner"> X is Winner</div>
+    <br>
+    
     <button id="myBtn">Try it</button>
+
     <p id="demo"></p>
+
+    <script>
+    document.getElementById("sq0").addEventListener("click", displayDate);
+
+    function displayDate() {
+      document.getElementById("sq0").innerText = "X";
+    }
+    </script>
+    
+    
     
 </body>
 </html>
