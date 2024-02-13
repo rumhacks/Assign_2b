@@ -65,15 +65,23 @@
             for (i=0; i<NUM_SQUARES; i++)
             {
                 id = "sq"+i;
-                document.write( "<div class='square' id='" + id + "'>1</div>" );
+                document.write( "<div class='square' id='" + id + "'></div>" );
             }
+            
+            document.getElementById("myBtn").addEventListener("click", displayDate);
+
+            function displayDate() {
+              	document.getElementById("demo").innerHTML = Date();
+            }
+            
         </script>
     </div>
     <br>
     <div class="turn"> X is Turn</div>
     <br>
     <div class="winner"> X is Winner</div>
-   
-
+    <button id="myBtn">Try it</button>
+    <p id="demo"></p>
+    
 </body>
 </html>
