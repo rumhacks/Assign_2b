@@ -78,19 +78,17 @@
     <div class="winner"> X is Winner</div>
     <br>
     
-    <button id="myBtn">Try it</button>
-
-    <p id="demo"></p>
-
     <script>
-    document.getElementsByClassName("sqaure").addEventListener("click", displayDate);
-
-    function displayDate() {
-      document.getElementsByClassName("square").innerText = "X";
+    let box = document.querySelectorAll('div.square');
+    
+    for (j of box) {
+      j.addEventListener('click', function() {
+      	alert (this.id)
+        this.innerHTML = "X";
+        //document.querySelector("#"+this.id).innerText = "X";
+        });
     }
-    </script>
     
-    
-    
+    </script>  
 </body>
 </html>
